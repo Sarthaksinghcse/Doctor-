@@ -1,0 +1,61 @@
+[
+    {"name": "Dr. A. Sharma", "specialization": "Cardiologist", "reference_number": "C1001", "contact": "+91-9876543101", "location": "Mumbai"},
+    {"name": "Dr. B. Singh", "specialization": "Dermatologist", "reference_number": "D1002", "contact": "+91-9876543102", "location": "Mumbai"},
+    {"name": "Dr. C. Rao", "specialization": "Gastroenterologist", "reference_number": "G1003", "contact": "+91-9876543103", "location": "Mumbai"},
+    {"name": "Dr. D. Malhotra", "specialization": "Orthopedic", "reference_number": "O1004", "contact": "+91-9876543104", "location": "Mumbai"},
+    {"name": "Dr. E. Iyer", "specialization": "Pulmonologist", "reference_number": "P1005", "contact": "+91-9876543105", "location": "Mumbai"},
+    
+    {"name": "Dr. F. Agarwal", "specialization": "Cardiologist", "reference_number": "C1006", "contact": "+91-9876543106", "location": "Delhi"},
+    {"name": "Dr. G. Verma", "specialization": "Dermatologist", "reference_number": "D1007", "contact": "+91-9876543107", "location": "Delhi"},
+    {"name": "Dr. H. Kaur", "specialization": "Gastroenterologist", "reference_number": "G1008", "contact": "+91-9876543108", "location": "Delhi"},
+    {"name": "Dr. I. Mehta", "specialization": "Orthopedic", "reference_number": "O1009", "contact": "+91-9876543109", "location": "Delhi"},
+    {"name": "Dr. J. Shastri", "specialization": "Pulmonologist", "reference_number": "P1010", "contact": "+91-9876543110", "location": "Delhi"},
+    
+    {"name": "Dr. K. Naik", "specialization": "Cardiologist", "reference_number": "C1011", "contact": "+91-9876543111", "location": "Bengaluru"},
+    {"name": "Dr. L. Joshi", "specialization": "Dermatologist", "reference_number": "D1012", "contact": "+91-9876543112", "location": "Bengaluru"},
+    {"name": "Dr. M. Pillai", "specialization": "Gastroenterologist", "reference_number": "G1013", "contact": "+91-9876543113", "location": "Bengaluru"},
+    {"name": "Dr. N. Desai", "specialization": "Orthopedic", "reference_number": "O1014", "contact": "+91-9876543114", "location": "Bengaluru"},
+    {"name": "Dr. O. Thomas", "specialization": "Pulmonologist", "reference_number": "P1015", "contact": "+91-9876543115", "location": "Bengaluru"},
+    
+    {"name": "Dr. P. Patel", "specialization": "Cardiologist", "reference_number": "C1016", "contact": "+91-9876543116", "location": "Hyderabad"},
+    {"name": "Dr. Q. Kulkarni", "specialization": "Dermatologist", "reference_number": "D1017", "contact": "+91-9876543117", "location": "Hyderabad"},
+    {"name": "Dr. R. Choudhury", "specialization": "Gastroenterologist", "reference_number": "G1018", "contact": "+91-9876543118", "location": "Hyderabad"},
+    {"name": "Dr. S. Saxena", "specialization": "Orthopedic", "reference_number": "O1019", "contact": "+91-9876543119", "location": "Hyderabad"},
+    {"name": "Dr. T. Rao", "specialization": "Pulmonologist", "reference_number": "P1020", "contact": "+91-9876543120", "location": "Hyderabad"},
+    
+    {"name": "Dr. U. Bhatt", "specialization": "Cardiologist", "reference_number": "C1021", "contact": "+91-9876543121", "location": "Chennai"},
+    {"name": "Dr. V. Gupta", "specialization": "Dermatologist", "reference_number": "D1022", "contact": "+91-9876543122", "location": "Chennai"},
+    {"name": "Dr. W. Reddy", "specialization": "Gastroenterologist", "reference_number": "G1023", "contact": "+91-9876543123", "location": "Chennai"},
+    {"name": "Dr. X. Prasad", "specialization": "Orthopedic", "reference_number": "O1024", "contact": "+91-9876543124", "location": "Chennai"},
+    {"name": "Dr. Y. Bhatia", "specialization": "Pulmonologist", "reference_number": "P1025", "contact": "+91-9876543125", "location": "Chennai"},
+
+    {"name": "Dr. Z. Nair", "specialization": "Cardiologist", "reference_number": "C1026", "contact": "+91-9876543126", "location": "Ahmedabad"},
+    {"name": "Dr. AA. Kumar", "specialization": "Dermatologist", "reference_number": "D1027", "contact": "+91-9876543127", "location": "Ahmedabad"},
+    {"name": "Dr. BB. Joseph", "specialization": "Gastroenterologist", "reference_number": "G1028", "contact": "+91-9876543128", "location": "Ahmedabad"},
+    {"name": "Dr. CC. Reddy", "specialization": "Orthopedic", "reference_number": "O1029", "contact": "+91-9876543129", "location": "Ahmedabad"},
+    {"name": "Dr. DD. Verma", "specialization": "Pulmonologist", "reference_number": "P1030", "contact": "+91-9876543130", "location": "Ahmedabad"},
+    
+    {"name": "Dr. EE. Mishra", "specialization": "Cardiologist", "reference_number": "C1031", "contact": "+91-9876543131", "location": "Pune"},
+    {"name": "Dr. FF. Sharma", "specialization": "Dermatologist", "reference_number": "D1032", "contact": "+91-9876543132", "location": "Pune"},
+    {"name": "Dr. GG. Yadav", "specialization": "Gastroenterologist", "reference_number": "G1033", "contact": "+91-9876543133", "location": "Pune"},
+    {"name": "Dr. HH. Singh", "specialization": "Orthopedic", "reference_number": "O1034", "contact": "+91-9876543134", "location": "Pune"},
+    {"name": "Dr. II. Joshi", "specialization": "Pulmonologist", "reference_number": "P1035", "contact": "+91-9876543135", "location": "Pune"},
+    
+    {"name": "Dr. JJ. Jain", "specialization": "Cardiologist", "reference_number": "C1036", "contact": "+91-9876543136", "location": "Kolkata"},
+    {"name": "Dr. KK. Bose", "specialization": "Dermatologist", "reference_number": "D1037", "contact": "+91-9876543137", "location": "Kolkata"},
+    {"name": "Dr. LL. Biswas", "specialization": "Gastroenterologist", "reference_number": "G1038", "contact": "+91-9876543138", "location": "Kolkata"},
+    {"name": "Dr. MM. Ali", "specialization": "Orthopedic", "reference_number": "O1039", "contact": "+91-9876543139", "location": "Kolkata"},
+    {"name": "Dr. NN. Saha", "specialization": "Pulmonologist", "reference_number": "P1040", "contact": "+91-9876543140", "location": "Kolkata"},
+
+    {"name": "Dr. OO. Iyer", "specialization": "Cardiologist", "reference_number": "C1041", "contact": "+91-9876543141", "location": "Jaipur"},
+    {"name": "Dr. PP. Chandra", "specialization": "Dermatologist", "reference_number": "D1042", "contact": "+91-9876543142", "location": "Jaipur"},
+    {"name": "Dr. QQ. Dave", "specialization": "Gastroenterologist", "reference_number": "G1043", "contact": "+91-9876543143", "location": "Jaipur"},
+    {"name": "Dr. RR. Shinde", "specialization": "Orthopedic", "reference_number": "O1044", "contact": "+91-9876543144", "location": "Jaipur"},
+    {"name": "Dr. SS. Patil", "specialization": "Pulmonologist", "reference_number": "P1045", "contact": "+91-9876543145", "location": "Jaipur"},
+
+    {"name": "Dr. Kushagra Singh", "specialization": "General Physician", "reference_number": "C1041", "contact": "+91-9876543141", "location": "Jaipur"},
+    {"name": "Dr. Kushagra Singh", "specialization": "General Physician", "reference_number": "D1042", "contact": "+91-9876543142", "location": "Delhi"},
+    {"name": "Dr. Kushagra Singh", "specialization": "General Physician", "reference_number": "G1043", "contact": "+91-9876543143", "location": "Mumbai"},
+    {"name": "Dr. Kushagra Singh", "specialization": "General Physician", "reference_number": "O1044", "contact": "+91-9876543144", "location": "Kolkata"},
+    {"name": "Dr. Kushagra Singh", "specialization": "General Physician", "reference_number": "P1045", "contact": "+91-9876543145", "location": "Ahmedabad"}
+]

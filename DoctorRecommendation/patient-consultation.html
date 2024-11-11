@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Consultation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Patient Consultation Form</h1>
+        <form id="consultation-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="number" class="form-control" id="age" required>
+            </div>
+            <div class="mb-3">
+                <label for="problem" class="form-label">Medical Problem</label>
+                <input type="text" class="form-control" id="problem" required>
+            </div>
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <h3 class="mt-5">Recommended Doctors</h3>
+        <div id="recommendations"></div>
+    </div>
+
+    <script>
+      const problemToSpecialization = {
+          // Cardiology-related issues
+          "heart": "Cardiologist",
+          "cardiac": "Cardiologist",
+          "chest pain": "Cardiologist",
+          "high blood pressure": "Cardiologist",
+          "blood pressure": "Cardiologist",
+          "palpitations": "Cardiologist",
+          "shortness of breath": "Cardiologist",
+          "heartache": "Cardiologist",
+
+          // Gastroenterology-related issues
+          "stomach": "Gastroenterologist",
+          "stomach ache": "Gastroenterologist",
+          "stomach pain": "Gastroenterologist",
+          "abdominal pain": "Gastroenterologist",
+          "digestion": "Gastroenterologist",
+          "indigestion": "Gastroenterologist",
+          "constipation": "Gastroenterologist",
+          "diarrhea": "Gastroenterologist",
+          "liver": "Gastroenterologist",
+          "acid reflux": "Gastroenterologist",
+          "nausea": "Gastroenterologist",
+          "vomiting": "Gastroenterologist",
+
+          // Dermatology-related issues
+          "skin": "Dermatologist",
+          "rash": "Dermatologist",
+          "acne": "Dermatologist",
+          "eczema": "Dermatologist",
+          "psoriasis": "Dermatologist",
+          "dry skin": "Dermatologist",
+          "itchy skin": "Dermatologist",
+          "hives": "Dermatologist",
+
+          // Orthopedic-related issues
+          "joints": "Orthopedic",
+          "joint pain": "Orthopedic",
+          "joint soreness": "Orthopedic",
+          "arthritis": "Orthopedic",
+          "bones": "Orthopedic",
+          "back pain": "Orthopedic",
+          "neck pain": "Orthopedic",
+          "knee pain": "Orthopedic",
+          "shoulder pain": "Orthopedic",
+          "wrist pain": "Orthopedic",
+          "fracture": "Orthopedic",
+          "sprain": "Orthopedic",
+          "muscle pain": "Orthopedic",
+
+          // Neurology-related issues
+          "brain": "Neurologist",
+          "headache": "Neurologist",
+          "migraine": "Neurologist",
+          "seizures": "Neurologist",
+          "memory loss": "Neurologist",
+          "numbness": "Neurologist",
+          "tingling": "Neurologist",
+          "dizziness": "Neurologist",
+
+          // Allergy and Immunology-related issues
+          "allergy": "Allergist",
+          "food allergy": "Allergist",
+          "pollen allergy": "Allergist",
+          "hay fever": "Allergist",
+          "allergic reaction": "Allergist",
+          "itchy eyes": "Allergist",
+          "sneezing": "Allergist",
+
+          // Pulmonology-related issues
+          "cough": "Pulmonologist",
+          "lungs": "Pulmonologist",
+          "asthma": "Pulmonologist",
+          "shortness of breath": "Pulmonologist",
+          "bronchitis": "Pulmonologist",
+          "respiratory infection": "Pulmonologist",
+          "chest congestion": "Pulmonologist",
+
+          // Endocrinology-related issues
+          "diabetes": "Endocrinologist",
+          "hormones": "Endocrinologist",
+          "thyroid": "Endocrinologist",
+          "weight gain": "Endocrinologist",
+          "weight loss": "Endocrinologist",
+          "metabolism": "Endocrinologist",
+          "adrenal": "Endocrinologist",
+
+          // General symptoms
+          "fever": "General Practitioner",
+          "cold": "General Practitioner",
+          "fatigue": "General Practitioner",
+          "weakness": "General Practitioner",
+          "body ache": "General Practitioner",
+          "infection": "General Practitioner",
+          "pain": "General Practitioner",
+          "swelling": "General Practitioner",
+        };
+        document.getElementById('consultation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const problem = document.getElementById('problem').value;
+            const location = document.getElementById('location').value;
+            const problemToSpecialist = problemToSpecialization[problem] || "General Physician"
+            fetch('/api/doctors')
+                .then(response => response.json())
+                .then(doctors => {
+                    const recommendations = doctors.filter(doctor => 
+                        doctor.specialization.toLowerCase() === problemToSpecialist.toLowerCase() && 
+                        doctor.location.toLowerCase() === location.toLowerCase()
+                    );
+
+                    const recommendationsDiv = document.getElementById('recommendations');
+                    recommendationsDiv.innerHTML = '';
+
+                    if (recommendations.length > 0) {
+                        recommendations.forEach(doctor => {
+                            const doctorDiv = document.createElement('div');
+                            doctorDiv.classList.add('mb-3');
+                            doctorDiv.innerHTML = `
+                                <h5>${doctor.name}</h5>
+                                <p><strong>Specialization:</strong> ${doctor.specialization}</p>
+                                <p><strong>Contact:</strong> ${doctor.contactNumber}</p>
+                                <p><strong>Location:</strong> ${doctor.location}</p>
+                                <p><strong>License Number:</strong> ${doctor.reference_number}</p>
+                                <p><strong>Contact:</strong> ${doctor.contact}</p>
+                            `;
+                            recommendationsDiv.appendChild(doctorDiv);
+                        });
+                    } else {
+                        recommendationsDiv.innerHTML = '<p>No doctors found matching your criteria.</p>';
+                    }
+                });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
